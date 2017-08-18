@@ -60,7 +60,7 @@ for track in pattern:
             tempo = line
         elif type(line) == type(note): 
             this_track_ticks += line.tick
-            new_notes.append([round(total_ticks/ratio),line.data])
+            new_notes.append([round(this_track_ticks/ratio),line.data])
         elif type(line) == type(noteoff):
             this_track_ticks += line.tick
     if this_track_ticks>total_ticks:
